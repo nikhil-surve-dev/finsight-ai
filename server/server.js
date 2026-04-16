@@ -20,6 +20,8 @@ app.use(cors({
     "http://localhost:5173",
     "https://finsight-ai-client-b85v.onrender.com"
   ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
 }));
 app.use(express.json());
