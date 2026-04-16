@@ -7,18 +7,24 @@ const Layout = () => {
   const { logout, user } = useAuth();
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains('dark'));
+  const [isDark, setIsDark] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme === 'dark';
+    }
+    return true; // Default to dark mode
+  });
   useEffect(() => {
-  const savedTheme = localStorage.getItem('theme');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
 
-  if (savedTheme === 'dark') {
-    document.documentElement.classList.add('dark');
-    setIsDark(true);
-  } else {
-    document.documentElement.classList.remove('dark');
-    setIsDark(false);
-  }
-}, []);
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+      setIsDark(true);
+    } else {
+      document.documentElement.classList.remove('dark');
+      setIsDark(false);
+    }
+  }, []);
 
   const toggleDarkMode = () => {
   const html = document.documentElement;
