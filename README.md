@@ -108,7 +108,7 @@ finsight-ai/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/nikhil-surve-dev/finsight-ai.git
+git clone https://github.com/nikkk-surve/finsight-ai.git
 cd finsight-ai
 ```
 
@@ -183,7 +183,7 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## 👤 Author
 
-Developed by [Nikhil Surve](https://github.com/nikhil-surve-dev).
+Developed by [Nikhil Surve](https://github.com/nikkk-surve).
 
 ---
 
